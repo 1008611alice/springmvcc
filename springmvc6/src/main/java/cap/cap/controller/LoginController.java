@@ -1,4 +1,4 @@
-package cap.controller;
+package cap.cap.controller;
 
 import cap.model.Admin;
 import cap.service.AdminService;

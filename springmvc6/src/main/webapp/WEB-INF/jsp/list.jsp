@@ -2,17 +2,15 @@
   Created by IntelliJ IDEA.
   User: 何欣梅
   Date: 2018/9/13
-  Time: 10:52
+  Time: 15:06
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
-    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 </head>
 <body>
-
 <table border="1">
     <tr>
         <td width="50">Id</td>
@@ -20,16 +18,14 @@
         <td width="150">Password</td>
         <td width="150">Edit</td>
         <td width="150">Delete</td>
-
     </tr>
     <c:forEach items="${pageBean.list}" var="admin">
         <tr>
             <td><c:out value="${admin.id}"/></td>
             <td><c:out value="${admin.username}"/></td>
             <td><c:out value="${admin.password}"/></td>
-            <td><c:out value="${admin.password}"/></td>
-            <td><a href="update?id=${admin.id}">Edit</a></td>
-            <td><a href="delete?id=${admin.id}">Delete</a></td>
+            <td><a href="edit?id=${admin.id}">Edit</a></td>
+            <td><a href="del?id=${admin.id}">Delete</a></td>
         </tr>
     </c:forEach>
 
@@ -47,5 +43,6 @@
         </td>
     </tr>
 </table>
+<a href="insert">add</a>
 </body>
 </html>
